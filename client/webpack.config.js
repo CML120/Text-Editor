@@ -16,7 +16,6 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
     },
     plugins: [
       // Generate HTML files based on index.html template
@@ -40,6 +39,7 @@ module.exports = () => {
         short_name: 'JATE',
         description: 'A text editor app with PWA support',
         start_url: './',
+        publicPath: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#ffffff',
