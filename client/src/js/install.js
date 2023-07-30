@@ -4,14 +4,15 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    window.deferredPrompt = event;
     butInstall.classList.toggle('hidden', false);
+    window.deferredPrompt = event;
+    console.log("button start :  good")
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
     const promptEvent = window.deferredPrompt;
-    console.log('Install started!')
+    console.log('Install prompt started!')
     if (!promptEvent) {
         return;
     }
@@ -22,6 +23,6 @@ butInstall.addEventListener('click', async () => {
 
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
-    console.log('JATE App installed!')
+    console.log('👍', 'appinstalled', event)
     window.deferredPrompt = null;
 });
