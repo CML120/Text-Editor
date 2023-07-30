@@ -1,4 +1,7 @@
+// Import the Workbox library for service worker management
 import { Workbox } from 'workbox-window';
+
+// Import Editor class and styles
 import Editor from './editor';
 import './database';
 import '../css/style.css';
@@ -6,6 +9,7 @@ import '../css/style.css';
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
+// Function to display a loading spinner
 const loadSpinner = () => {
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');

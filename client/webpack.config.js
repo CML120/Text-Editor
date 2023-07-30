@@ -1,11 +1,13 @@
+// Import the HtmlWebpackPlugin, a plugin to generate HTML files.
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
-const path = require('path');
-const { InjectManifest } = require('workbox-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');// Import the WebpackPwaManifest, a plugin to generate the web app manifest file.
+const path = require('path'); // Import the 'path' module to work with file paths.
+const { InjectManifest } = require('workbox-webpack-plugin');// Import the InjectManifest class from the 'workbox-webpack-plugin' to inject the service worker.
 
+// Export the Webpack configuration as a function.
 module.exports = () => {
   return {
-    mode: 'development',
+    mode: 'development',  //set mode
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
@@ -13,6 +15,7 @@ module.exports = () => {
       editor: './src/js/editor.js',
       header: './src/js/header.js',
     },
+    // Specify the output settings for the bundled JavaScript files.
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
@@ -38,7 +41,7 @@ module.exports = () => {
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'A text editor app with PWA support',
-        start_url: './',
+        start_url: '/',
         publicPath: '/',
         display: 'standalone',
         background_color: '#ffffff',
@@ -52,7 +55,7 @@ module.exports = () => {
         ],
       }),
     ],
-
+    // Configure the module settings for handling CSS and JavaScript
     module: {
       rules: [
         // Add CSS loaders

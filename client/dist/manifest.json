@@ -35,7 +35,7 @@
   "short_name": "JATE",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "./",
+  "start_url": "/",
   "description": "A text editor app with PWA support",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
