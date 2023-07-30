@@ -11,7 +11,8 @@
 
   ## Project Description
   This project builds a text editor that runs in the browser.  
-  This project will be a single page app that meets PWA criteria, and uses Express.js as well as the 'idb' package for storing and retrieving data.
+  This project will be a single page app that meets PWA criteria, and uses Express.js as well as the 'idb' package for storing and retrieving data.  
+  Deployed on Heroku:  [Jate PWA CML](https://jate-pwa-cml-f40c199d2ecf.herokuapp.com/)
   
   ## User Story
 
@@ -56,15 +57,13 @@ THEN I should have proper build scripts for a webpack application
   
    
 
-  
   ## Installation 
   Clone the repo, then open the project in VS Code  
   Open the project in the terminal and use 'npm install' to install all dependencies  
 
 
-
   ## Usage 
-  In the terminal use 'npm start' to start the app
+  In the terminal use 'npm start' to start the app  
   When used locally, the text editor will be available via:    http://localhost:3000/  
   
 
@@ -72,3 +71,4 @@ THEN I should have proper build scripts for a webpack application
   ## Contact
   Please contact [CML120](https://github.com/CML120) at cheelor922@gmail.com with any questions.
 
+![Alt text](image.png)
