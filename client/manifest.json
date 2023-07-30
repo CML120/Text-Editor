@@ -1,7 +1,7 @@
 {
   "short_name": "JATE",
   "name": "Just Another Text Editor",
-  "description": "This is a simple text editor",
+  "description": "A text editor app with PWA support",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
