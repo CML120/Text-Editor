@@ -8,18 +8,22 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header.js',
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      publicPath: '/',
     },
     plugins: [
       // Generate HTML files based on index.html template
       new HtmlWebpackPlugin({
         template: './index.html',
         chunks: ['main'],
-        filename: 'JATE',
+        filename: 'index.html',
       }),
 
       // Inject the service worker into your app
@@ -30,7 +34,7 @@ module.exports = () => {
 
       // Generate the web app manifest file
       new WebpackPwaManifest({
-        fingerprints: false,
+        fingerprints: false, //needs to be false so files aren't fingerprinted (renamed for caching purposes)
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
