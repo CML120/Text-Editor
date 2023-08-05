@@ -64,7 +64,7 @@ THEN I should have proper build scripts for a webpack application
 
   ## Usage 
   In the terminal use 'npm start' to start the app  
-  When used locally, the text editor will be available via:    http://localhost:3000/  
+  When used locally, the text editor will be available via:    http://localhost:3000/    
   
 
   
